@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet"><type='text/css'>
+<style>
+ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+body {
+  font-family: "Bangers", cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+  background-color: blue;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+  bac
+}
+h1 {
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+  color: yellow;
+  
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+  color: yellow;
+}
+p {
+  color: rgba(255,255,25,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.food
+  background-image: url("https://hips.hearstapps.com/del.h-cdn.co/assets/17/28/1024x512/landscape-1499895297-jerk-chicken-delish.jpg?resize=1200:*");
+}
+.food
+  background-image: url("https://recipeland.com/images/r/18336/511c693aac4ca94e4cf8_1024.jpg");
+}
+.food
+  background-image: url("https://8exll2rwl8l1f2ayejq2l9yh-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/Oreo-Chocolate-Shake.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }                             
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<ul>
+      <li><button onclick=appetizer()>Appetizer</button></li>
+      <li><button onclick=lunch()>Lunch</button></li>
+      <li><button onclick=drink()>Drink</button></li>
+    </ul>
+<h1>Tyler's restaurant</h1>
+<h2>A Carribbean Eatery</h2>
+<div id="Food">
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  
+
+AppetizerImages = [
+  'url("https://hips.hearstapps.com/del.h-cdn.co/assets/17/28/1024x512/landscape-1499895297-jerk-chicken-delish.jpg?resize=1200:*")',
+  'url("https://recipeland.com/images/r/18336/511c693aac4ca94e4cf8_1024.jpg")',
+  'url("https://8exll2rwl8l1f2ayejq2l9yh-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/Oreo-Chocolate-Shake.jpg")',
+  ]
+ lunchImages3 = [
+   'url("http://images.media-allrecipes.com/userphotos/960x960/3757723.jpg")',
+   'url("https://www.redlobster.com/images/default-source/images/social-photos/social-share.jpg?sfvrsn=2")',
+   'url("https://media4.s-nbcnews.com/i/newscms/2017_20/1215351/shake-shack-crinkle-cut-fries-todya-170518-tease_791dd22f8b11f4a36393f857d2a93540.jpg")',
+  ]
+  DrinkImages = [
+    'url("https://cf4.s3.souqcdn.com/item/2018/06/04/22/07/11/04/item_XL_22071104_139001232.jpg")',
+    'url("https://previews.123rf.com/images/denismart/denismart1611/denismart161100088/64795971-london-united-kingdom-november-04-2016-bottle-of-corona-extra-beer-with-lime-slice-corona-produced-b.jpg")',
+    'url("https://i5.walmartimages.com/asr/a3e0081a-5a6a-4ce4-9a7c-4b42f192ac20_2.8fc1ce4e4108263cd52d2dc546044f24.jpeg")',
+  ]
+AppetizerDivs = [
+    '<div class="item"><p>Jerk Chicken <span class="price">$34</span><br /><small>Old Fashion Carribean Appetizer. </small></p></div>',
+    '<div class="item"><p>Chicken Roti <span class="price">$22</span><br /><small>Stuffed with lettuce tomato and chicken.</small></p></div>',
+    '<div class="item"><p>Chocolate Oreo Milkshake <span class="price">$11</span><br /><small>Crushed up oreos in a milkshake.</small></p></div>',  
+
+]
+LunchDivs = [
+  '<div class="item" onclickthis.classList.toggle("show-description) =this><p>Hamburger <span class="price">$14</span><br/><small>Classic Hamburger. </small></p></div>',
+  '<div class="item"  onclickthis.classList.toggle("show-description") ><p>Lobster <span class="price">$100</span><br/><small>RedLobster top choice. </small></p></div',
+  '<div class="item"  onclickthis.classList.toggle("show-description") ><p>Curly Fries <span class="price">$7.50<span><br/><small>Fries. <.small></p></div',
+  
+]
+
+DrinkDivs = [
+   '<div class="item" onclickthis.classList.toggle("show-description) =this><p>Sprite <span class="price">$2.50</span><br/><small>Lemon-Lime Soda. </small></p></div>',
+   '<div class="item" onclickthis.classList.toggle("show-description) =this><p>Coronna <span class="price">$6</span><br/><small>Carribbean Beer. </small></p></div>',
+    '<div class="item" onclickthis.classList.toggle("show-description) =this><p> Kool Aid <span class="price">$2</span><br/><small>Tropical Punch Kool Aid. </small></p></div>',
+    
+  ]
+function appetizer() {
+    Yum = document.getElementById("Food")
+    Yum.innerHTML = ''
+    Yum.innerHTML +=AppetizerDivs[0]
+    Yum.innerHTML +=AppetizerDivs[1]
+    Yum.innerHTML +=AppetizerDivs[2]
+    items = document.getElementsByClassName("item")
+    items[0].style.background = AppetizerImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = AppetizerImages[1]
+    items[2].style.background = AppetizerImages[2]
+
+}
+
+
+function lunch() {
+    Yum = document.getElementById("Food")
+    Yum.innerHTML = ''
+    Yum.innerHTML +=LunchDivs[0]
+    Yum.innerHTML +=LunchDivs[1]
+    Yum.innerHTML +=LunchDivs[2]
+   items = document.getElementsByClassName("item")
+    items[0].style.background = lunchImages3[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = lunchImages3[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = lunchImages3[2]
+    items[2].style.backgroundSize = '129% 100%'
+}
+
+function drink() {
+   Yum = document.getElementById("Food")
+    Yum.innerHTML = ''
+    Yum.innerHTML +=DrinkDivs[0]
+    Yum.innerHTML +=DrinkDivs[1]
+    Yum.innerHTML +=DrinkDivs[2]
+   items = document.getElementsByClassName("item")
+    items[0].style.background = DrinkImages[0]
+    items[0].style.backgroundSize = '110% 110%'
+    items[1].style.background = DrinkImages[1]
+    items[1].style.backgroundSize = '94% 94%'
+    items[2].style.background = DrinkImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  
+
+}
+ 
+</script>
+
+</body>
+
